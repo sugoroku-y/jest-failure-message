@@ -1,6 +1,6 @@
 {
     "name": "@sugoroku-y/jest-failure-message",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Custom asymmetric matcher to compare messages output within JEST",
     "license": "MIT",
     "main": "./lib/index.js",
