@@ -1,0 +1,10 @@
+/src/
+/coverage/
+/.vscode/
+*.tgz
+/tests/
+/.eslint*
+/.prettier*
+/jest.*
+tsconfig*.json
+/tools/
