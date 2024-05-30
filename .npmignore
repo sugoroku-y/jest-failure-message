@@ -8,3 +8,4 @@
 /jest.*
 tsconfig*.json
 /tools/
+/.github/
