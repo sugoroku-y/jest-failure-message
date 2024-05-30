@@ -105,7 +105,7 @@
         "import/no-extraneous-dependencies": [
             "error",
             {
-                "devDependencies": ["**/tests/**", "**/testing-library/**"],
+                "devDependencies": ["**/tests/**"],
                 "optionalDependencies": false
             }
         ],
@@ -123,12 +123,29 @@
     },
     "overrides": [
         {
+            "files": ["**/tests/**"],
+            "rules": {
+                "jsdoc/require-jsdoc": "off"
+            }
+        },
+        {
             "files": "*.cjs",
             "rules": {
                 "@typescript-eslint/no-var-requires": "off",
                 "@typescript-eslint/no-unsafe-assignment": "off",
-                "import/extensions": "off",
+                "import/extensions": [
+                    "error",
+                    {
+                        "json": "always"
+                    }
+                ],
                 "import/order": "off"
+            }
+        },
+        {
+            "files": "tests/**/*.test.ts",
+            "rules": {
+                "import/no-extraneous-dependencies": "off"
             }
         }
     ]

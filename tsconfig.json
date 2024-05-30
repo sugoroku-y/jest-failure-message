@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "ES2018",
+        "target": "ESNext",
         "module": "commonjs",
         "lib": ["ESNext"],
         "outDir": "./lib",
@@ -23,7 +23,6 @@
         "exactOptionalPropertyTypes": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedIndexedAccess": true,
         "noImplicitOverride": true,
         "noPropertyAccessFromIndexSignature": true,
         "allowUnusedLabels": false,

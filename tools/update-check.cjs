@@ -1,10 +1,14 @@
 const { spawnSync } = require('child_process');
 
-const result = spawnSync('npm', ['update'], {
+const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+const result = spawnSync(npmCmd, ['update'], {
     encoding: 'utf8',
     stdio: 'inherit',
 });
 if (result.status !== 0) {
+    if (result.error) {
+        console.error(result.error);
+    }
     process.exit(result.status);
 }
 
@@ -16,9 +20,10 @@ const packageLockJson = require('../package-lock.json');
 const { dependencies, devDependencies } = packageJson;
 const { packages } = packageLockJson;
 
-for (const [name, versionSpec] of Object.entries(dependencies).concat(
-    Object.entries(devDependencies),
-)) {
+for (const [name, versionSpec] of [
+    ...(dependencies ? Object.entries(dependencies) : []),
+    ...(devDependencies ? Object.entries(devDependencies) : []),
+]) {
     if (versionSpec.startsWith('github:')) {
         continue;
     }

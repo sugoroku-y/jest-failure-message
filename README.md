@@ -24,16 +24,16 @@ import '@sugoroku-y/jest-failure-message';
 
 ```ts
 expect(() => {
-    expect(hoge).toFuga(PIYO);
+  expect(hoge).toFuga(PIYO);
 }).toThrow(expect.failureMessage`
-    expect(received).toFuga(expected)
+  expect(received).toFuga(expected)
 
-    - Expected  -  1
-    + Received  +  1
+  - Expected  -  1
+  + Received  +  1
 
-    - hoge
-    + piyo
-    `);
+  - hoge
+  + piyo
+  `);
 ```
 
 もしくは
