@@ -21,6 +21,9 @@
         "versioncheck": "node tools/versioncheck.cjs",
         "preversion": "npm run versioncheck"
     },
+    "dependencies": {
+        "@sugoroku-y/indented": "github:sugoroku-y/indented"
+    },
     "devDependencies": {
         "@sugoroku-y/jest-runner-prettier": "github:sugoroku-y/jest-runner-prettier",
         "@types/jest": "^29.5.12",
@@ -41,8 +44,5 @@
         "ts-jest": "^29.1.4",
         "ts-node": "^10.9.2",
         "typescript": "^5.4.5"
-    },
-    "dependencies": {
-        "@sugoroku-y/indented": "github:sugoroku-y/indented"
     }
 }

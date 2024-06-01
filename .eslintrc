@@ -10,7 +10,7 @@
         "plugin:jest/style",
         "prettier"
     ],
-    "plugins": ["jest", "import", "unused-imports", "@typescript-eslint"],
+    "plugins": ["jest", "jsdoc","import", "unused-imports", "@typescript-eslint"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2021,
@@ -125,7 +125,8 @@
         {
             "files": ["**/tests/**"],
             "rules": {
-                "jsdoc/require-jsdoc": "off"
+                "jsdoc/require-jsdoc": "off",
+                "import/no-extraneous-dependencies": "off"
             }
         },
         {
@@ -139,13 +140,8 @@
                         "json": "always"
                     }
                 ],
-                "import/order": "off"
-            }
-        },
-        {
-            "files": "tests/**/*.test.ts",
-            "rules": {
-                "import/no-extraneous-dependencies": "off"
+                "import/order": "off",
+                "jsdoc/no-types": "off"
             }
         }
     ]
