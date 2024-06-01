@@ -10,7 +10,13 @@
         "plugin:jest/style",
         "prettier"
     ],
-    "plugins": ["jest", "jsdoc","import", "unused-imports", "@typescript-eslint"],
+    "plugins": [
+        "jest",
+        "jsdoc",
+        "import",
+        "unused-imports",
+        "@typescript-eslint"
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2021,
